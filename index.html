@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>inForm.me</title>
+
+    <!-- Bulma CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/bulma.css"> -->
+    <link rel="stylesheet" href="assets/css/bulmaswatch.min.css">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+
+    <!-- Owl Carousel JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- Script JS-->
+    <script src="assets/js/script.js"></script>
+
+    <!-- SweetAlert2 11.0.0 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+
+</head>
+
+<body>
+
+<!-- Scroll Inicio -->
+<a href="#" id="scroll"><span>↑</span></a>
+
+<!-- < Header > -->
+<section class="px-6 has-background-light">
+
+
+    <!-- < NavBar > -->
+    <nav class="navbar py-3" style="background-color: transparent;">
+
+
+        <div class="navbar-brand">
+
+            <a class="navbar-item" href="/">
+                <img src="assets/img/inform-logo.png" alt="inForm.me: web development services" width="112" height="28">
+            </a>
+
+
+            <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false">
+
+
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+
+
+        </div>
+
+
+        <div class="navbar-menu">
+            <div class="navbar-end"><a class="navbar-item" href="#inicio">Inicio</a><a class="navbar-item" href="#empresa">Empresa</a><a class="navbar-item" href="#servicios">Servicios</a><a class="navbar-item" href="#testimonios">Testimonios</a><a class="navbar-item" href="#contacto">Contacto</a></div>
+            <div class="navbar-item">
+                <div class="buttons"><a class="button" href="#">Acceder</a><a class="button is-primary" href="#">Crear Cuenta</a></div>
+            </div>
+        </div>
+
+
+    </nav>
+    <!-- < /NavBar > -->
+
+
+</section>
+
+
+
+<!-- Section Forms -->
+<section class="section is-relative is-clipped">
+    <div class="is-hidden-touch has-background-primary" style="position: absolute; top: 0; left: 0; width: 70%; height: 100%"></div>
+    <div class="is-hidden-desktop has-background-primary is-fullwidth" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"></div>
+    <div class="container mx-auto is-relative">
+        <div class="is-vcentered columns is-multiline">
+            <div class="column is-6 is-7-desktop mb-5">
+                <div>
+                    <h2 class="has-text-white mb-4 is-size-1 is-size-3-mobile has-text-weight-bold" style="line-height: 48px">LLEVA TU EXPERIENCIA A OTRO NIVEL</h2>
+                    <br>
+                    <p class="has-text-white mb-0 has-text-weight-bold" style="line-height: 20px"><span style="text-decoration: underline black; font-weight: 900"> inForm es una potente herramienta de Formulario configurado y automatizado con Google Workspace y CRM Trello.</span></p>
+                </div>
+            </div>
+            <div class="column is-6 is-5-desktop mx-auto">
+                <div class="box has-background-light has-text-centered">
+
+
+                    <!-- Formulario de Captura de Datos  -->
+                    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+                    <!-- iFrame para que el formulario no redireccione a Google Form  -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                    <form method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSfXPbIynnsQJAZJHA1AIqBOZOgb15t2i-ooTpzpgwnJrffjgQ/formResponse" onsubmit="formSubmitted()" target="hidden_iframe">
+
+                        <!-- Título del Formulario -->
+                        <span class="is-size-3 has-text-weight-bold" style="letter-spacing: -1px">Reserva tu Entrada</span>
+
+                        <!-- Subtitulo del Formulario -->
+                        <h3 class="mb-5 is-size-6 has-text-grey has-text-weight-bold" style="letter-spacing: 0px">Te adjuntamos el Programa en PDF</h3>
+                        <br>
+
+                        <!-- Componentes del Formulario ...  -->
+                            <!-- Nombre Completo -->
+                            <div class="field">
+                                <div class="control">
+                                    <!-- Validación HTML: Campo Requerido & Regex para Solo Letras y Espacios  -->
+                                    <input name="entry.1914583767" class="input" type="text" placeholder="Nombre Completo" required pattern="^[a-zA-Z\s]+$" title="- Solo Letras y Espacios" value="">
+                                </div>
+                            </div>
+                            <!-- Rol Único Nacional ( Chile )  -->
+                            <div class="field">
+                                <div class="control">
+                                    <input name="entry.1058245121" class="input" type="text" placeholder="Rol Único Nacional (Chile)" required pattern="[0-9]{7,8}-?[0-9Kk]{1}" title="- Ingresa un RUN válido (sin puntos y con guión opcional)" value="">
+                                </div>
+                            </div>
+                            <!-- Correo Electrónico -->
+                            <div class="field">
+                                <div class="control">
+                                    <input name="entry.726931162" class="input" type="email" required placeholder="Correo Electrónico" value="">
+                                </div>
+                            </div>
+                            <!-- WhatsApp Chile -->
+                            <div class="field">
+                                <div class="control">
+                                    <input name="entry.51146829" class="input" type="text" placeholder="WhatsApp Chile +569" required pattern="^\+56\d{9}$" title="Ingresa un número de WhatsApp chileno válido" value="">
+                                </div>
+                            </div>
+                            <!-- Selección de Servicio -->
+                            <div class="field">
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+
+                                        <select required name="entry.537176664" >
+
+                                            <option value="" disabled selected >Selecciona un Ticket</option>
+                                            <option value="Pase General">Pase General $350.000</option>
+                                            <option value="Pase Lounge">Pase Lounge $680.000</option>
+                                            <option value="Pase Lounge Premium">Pase Lounge Premium $900.000</option>
+
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- NewsLetter -->
+                            <div class="field">
+                                <label class="checkbox mb-2">
+                                    <input name="entry.1143445982" class="checkbox mr-2 " type="checkbox" name="terms" value="1" checked>
+                                    <small class="has-text-grey-dark">Acepto recibir Promociones y Novedades</small>
+                                </label>
+                            </div>
+                            <!-- Botón de Envío -->
+                            <button id="button_submit_form" class="button is-danger py-2 is-fullwidth" style="font-weight: 700">Reservar Entrada</button>
+
+                    </form>
+
+
+
+                    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- < Carousel > -->
+<section id="inicio" class="section has-background-white">
+        <div class="container has-text-centered">
+            <h2 class="mt-2 mb-3 is-size-1 is-size-3-mobile has-text-grey-dark has-text-weight-bold">Desarrollo + Automatización</h2>
+            <p class="subtitle has-text-grey">Solución de Software para la administración o gestión de la relación con los clientes.</p>
+            <br>
+        </div>
+        <div class="owl-carousel owl-theme">
+            <div>
+                <img style="border-radius: 0.5rem" src="assets/img/carousel/inform-carousel-1.png" alt="">
+            </div>
+            <div>
+                <img style="border-radius: 0.5rem" src="assets/img/carousel/inform-carousel-2.png" alt="">
+            </div>
+            <div>
+                <img style="border-radius: 0.5rem" src="assets/img/carousel/inform-carousel-3.png" alt="">
+            </div>
+            <div>
+                <img style="border-radius: 0.5rem" src="assets/img/carousel/inform-carousel-4.png" alt="">
+            </div>
+            <div>
+                <img style="border-radius: 0.5rem" src="assets/img/carousel/inform-carousel-5.png" alt="">
+            </div>
+        </div>
+</section>
+
+
+<!-- < Team Company > -->
+<section id="empresa" class="section">
+    <div class="container">
+        <div class="columns is-multiline is-centered">
+            <div class="column is-8 mb-6 has-text-centered">
+                <span class="has-text-grey-dark">Nuestro Equipo de Trabajo</span>
+                <h2 class="mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Crecer experimentando</h2>
+                <p class="subtitle has-text-grey">Aprender y crecer experimentando local y globalmente, a través de proyectos.</p>
+            </div>
+        </div>
+
+
+        <div class="columns is-multiline">
+
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box p-6 has-background-light">
+                    <div class="has-text-centered">
+                        <img class="mx-auto mb-5 image" src="assets/img/green-400-avatar.png" alt="" style="width: 80px;height: 80px">
+                        <h4 class="mb-2 is-size-5 has-text-weight-bold">Marco Arata</h4>
+                        <p class="has-text-grey">CEO &amp; Fundador</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box p-6 has-background-light">
+                    <div class="has-text-centered">
+                        <img class="mx-auto mb-5 image" src="assets/img/green-400-avatar.png" alt="" style="width: 80px;height: 80px">
+                        <h4 class="mb-2 is-size-5 has-text-weight-bold">Marco Arata</h4>
+                        <p class="has-text-grey">Web Designer</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box p-6 has-background-light">
+                    <div class="has-text-centered">
+                        <img class="mx-auto mb-5 image" src="assets/img/green-400-avatar.png" alt="" style="width: 80px;height: 80px">
+                        <h4 class="mb-2 is-size-5 has-text-weight-bold">Marco Arata</h4>
+                        <p class="has-text-grey">Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!-- < /Team Company > -->
+
+<!-- < Portfolio > -->
+<section id="servicios" class="section">
+
+    <div class="container">
+
+
+        <div class="columns is-multiline is-centered mb-6">
+            <div class="column is-8 has-text-centered">
+                <span class="has-text-grey-dark">Nuestros Servicios</span>
+                <h2 class="mt-2 is-size-1 is-size-3-mobile has-text-weight-bold">Soluciones Web Modernas</h2>
+            </div>
+        </div>
+
+
+        <div class="mb-6 buttons is-centered">
+            <a class="button is-primary is-outlined" href="https://www.google.cl/" target="_blank">Active tab</a>
+            <a class="button is-black is-outlined" href="https://www.google.cl/" target="_blank">Normal tab</a>
+            <a class="button is-black is-outlined" href="https://www.google.cl/" target="_blank">Normal tab</a>
+            <a class="button is-black is-outlined" href="https://www.google.cl/" target="_blank">Normal tab</a>
+        </div>
+        <div class="columns is-multiline">
+
+
+            <div class="column is-6">
+                <div class="columns is-multiline">
+                    <div class="column is-6">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                    <div class="column is-6">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                    <div class="column is-12">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="column is-6">
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                    <div class="column is-6">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                    <div class="column is-6">
+                        <img class="image is-fullwidth" src="assets/img/green-400-square.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+<!-- < /Portfolio > -->
+
+
+<!-- < Testimonial > -->
+<section id="testimonios" class="section">
+
+
+    <div class="container">
+
+
+        <div class="mb-6 columns is-multiline is-centered">
+            <div class="column is-8 has-text-centered">
+                <span class="has-text-grey-dark">Nuestros Clientes</span>
+                <h2 class="mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Confianza y Seguridad</h2>
+                <p class="subtitle has-text-grey">La satisfacción del cliente es nuestro objetivo final. Esto es lo que nuestros clientes piensan de nosotros.</p>
+            </div>
+        </div>
+
+
+        <div class="is-vcentered columns is-multiline">
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box has-background-light">
+                    <p class="subtitle has-text-grey mb-5">«La plataforma es súper fácil de usar y está mejorando y siendo más versátil todo el tiempo.»</p>
+                    <img class="mb-3 image is-fullwidth" src="assets/img/green-400-avatar.png" alt="" style="width: 48px;height: 48px">
+                    <h4 class="mb-2 is-size-5 has-text-weight-bold">Carolina González</h4>
+                    <p class="has-text-grey">Marketing Digital</p>
+                </div>
+            </div>
+
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box has-background-light">
+                    <p class="subtitle has-text-grey mb-5">«Este producto realmente ha simplificado mi vida. Su diseño intuitivo y funcionalidad excepcional lo convierten en una herramienta imprescindible para mi trabajo diario. ¡Lo recomiendo a todos!»</p>
+                    <img class="mb-3 image is-fullwidth" src="assets/img/green-400-avatar.png" alt="" style="width: 48px;height: 48px">
+                    <h4 class="mb-2 is-size-5 has-text-weight-bold">Darío Quinteros</h4>
+                    <p class="has-text-grey-dark">Jefe de Ventas</p>
+                </div>
+            </div>
+
+
+
+            <div class="column is-6 is-4-desktop mb-4">
+                <div class="box has-background-light">
+                    <p class="subtitle has-text-grey mb-5">«Fácil de navegar, proceso de compra sin complicaciones y un servicio de entrega rápido. Definitivamente compraré de nuevo.»</p>
+                    <img class="mb-3 image is-fullwidth" src="assets/img/green-400-avatar.png" alt="" style="width: 48px;height: 48px">
+                    <h4 class="mb-2 is-size-5 has-text-weight-bold">Paola Torres</h4>
+                    <p class="has-text-grey">Diseñadora</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- < /Testimonial > -->
+
+<!-- < Contact > -->
+<section id="contacto" class="section">
+    <div class="container">
+
+
+        <div class="columns is-multiline is-centered">
+
+
+            <div class="column is-8 is-6-desktop">
+                <div class="mx-auto mb-5 has-text-centered">
+                    <span class="has-text-grey-dark">¿Nos cuentas tu Proyecto?</span>
+                    <h2 class="mt-2 mb-3 is-size-1 is-size-3-mobile has-text-weight-bold">Contáctanos</h2>
+                    <p class="has-text-grey-dark">Para información sobre nuestros servicios no dudes en contáctanos de lunes a viernes de 9.00am a 6.00pm.</p>
+                </div>
+            </div>
+
+
+            <div class="column is-12 is-8-desktop">
+                <div class="columns is-multiline">
+
+                    <div class="column is-4 mb-4">
+                        <div class="box py-6 has-background-light has-text-centered" style="height: 100%">
+                            <h3 class="is-size-4 has-text-weight-bold">Dirección</h3>
+                            <p class="mt-3 mb-1">Camino las Montañas 6861</p>
+                            <p>Viña del Mar, 2520000</p>
+                        </div>
+                    </div>
+
+
+                    <div class="column is-4 mb-4">
+                        <div class="box py-6 has-background-light has-text-centered" style="height: 100%">
+                            <h3 class="is-size-4 has-text-weight-bold">Contacto</h3>
+                            <p class="mt-3 mb-1">admin@infont.me</p>
+                            <p>+56 984-67-432</p>
+                        </div>
+                    </div>
+
+
+                    <div class="column is-4 mb-4">
+                        <div class="box py-6 has-background-light has-text-centered" style="height: 100%; max-height: 196px;">
+                            <h3 class="is-size-4 has-text-weight-bold mb-5">Socials</h3>
+                            <div class="column is-three-fifths is-12-desktop mb-6">
+                                <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                                    <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/facebook.svg">
+                                </a>
+                                <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                                    <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/github.svg">
+                                </a>
+                                <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                                    <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/instagram.svg">
+                                </a>
+                                <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                                    <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/linkedin.svg">
+                                </a>
+                                <a class="is-inline-block" href="https://www.google.cl/" target="_blank">
+                                    <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/twitter.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- < /Contact > -->
+
+
+<!-- < Footer > -->
+<footer class="section">
+    <div class="container">
+
+        <div class="columns is-multiline" style="border-bottom: 1px solid #dee2e6;">
+            <div class="column is-3">
+
+                <div class="column is-three-sixths mb-6">
+                <a class="mb-4 is-inline-block" href="#">
+                    <img src="assets/img/inform-logo.png" alt="inForm.me: web development services" width="112" height="28">
+                </a>
+
+                    <p class="has-text-grey-dark mb-6">Síguenos en redes sociales.</p>
+                </div>
+
+                <div class="column is-three-fifths mb-6">
+                    <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                        <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/facebook.svg">
+                    </a>
+                    <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                        <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/github.svg">
+                    </a>
+                    <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                        <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/instagram.svg">
+                    </a>
+                    <a class="mr-3 is-inline-block" href="https://www.google.cl/" target="_blank">
+                        <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/linkedin.svg">
+                    </a>
+                    <a class="is-inline-block" href="https://www.google.cl/" target="_blank">
+                        <img class="mx-auto image is-fullwidth" alt="" src="assets/socials/twitter.svg">
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="column is-9">
+                <div class="columns is-multiline">
+
+
+                    <div class="column is-6 is-3-desktop mb-5">
+                        <div class="column is-2 mb-5">
+                        <h4 class="is-size-4 has-text-weight-bold mb-4">Empresa</h4>
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-small is-info is-outlined">About Us</button>
+                            <button class="button is-small is-info is-outlined">Careers</button>
+                            <button class="button is-small is-info is-outlined">Press</button>
+                            <button class="button is-small is-info is-outlined">Blog</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="column is-6 is-3-desktop mb-5">
+                        <div class="column is-2 mb-5">
+                        <h4 class="is-size-4 has-text-weight-bold mb-4">Páginas</h4>
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-small is-info is-outlined">Acceder</button>
+                            <button class="button is-small is-info is-outlined">Registrar</button>
+                            <button class="button is-small is-info is-outlined">Add List</button>
+                            <button class="button is-small is-info is-outlined">Contacto</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="column is-6 is-3-desktop mb-5">
+                        <div class="column is-2 mb-5">
+                        <h4 class="is-size-4 has-text-weight-bold mb-4">Legal</h4>
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-small is-info is-outlined">Terms</button>
+                            <button class="button is-small is-info is-outlined">Nosotros</button>
+                            <button class="button is-small is-info is-outlined">Equipo</button>
+                            <button class="button is-small is-info is-outlined">Privacy</button>
+                        </div>
+                    </div>
+
+
+                    <div class="column is-6 is-3-desktop mb-5">
+                        <div class="column is-2 mb-5">
+                        <h4 class="is-size-4 has-text-weight-bold mb-4">Recursos</h4>
+                        </div>
+                        <div class="buttons">
+                            <button class="button is-small is-info is-outlined">Blog</button>
+                            <button class="button is-small is-info is-outlined">Servicios</button>
+                            <button class="button is-small is-info is-outlined">Productos</button>
+                            <button class="button is-small is-info is-outlined">Precios</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="pt-5 has-text-centered">
+            <p>2023© Marco Arata/Bulmaswatch/Bulma.io</p>
+        </div>
+
+    </div>
+</footer>
+<!-- < /Footer > -->
+
+</body>
+</html>
